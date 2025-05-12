@@ -41,7 +41,7 @@ BEGIN
     RAISE NOTICE '>> Inserting Data Into: bronze.crm_cust_info';
     -- COPY bronze.crm_cust_info FROM '../SQL-DW-Project/Datasets/source_crm/cust_info.csv' DELIMITER ',' CSV HEADER;
     COPY bronze.crm_cust_info 
-        FROM 'C:\Users\shaik\OneDrive\Documents\Codes\SQL\SQL-DW-Project\Datasets\source_crm\cust_info.csv'
+        FROM '<File_Location>\SQL-DW-Project\Datasets\source_crm\cust_info.csv'
         DELIMITER ',' CSV HEADER;
     end_time := NOW();
     RAISE NOTICE '>> Load Duration: % seconds', EXTRACT(SECOND FROM end_time - start_time);
@@ -52,7 +52,7 @@ BEGIN
     TRUNCATE TABLE bronze.crm_prd_info;
     RAISE NOTICE '>> Inserting Data Into: bronze.crm_prd_info';
     COPY bronze.crm_prd_info
-        FROM 'C:\Users\shaik\OneDrive\Documents\Codes\SQL\SQL-DW-Project\Datasets\source_crm\prd_info.csv'
+        FROM '<File_Location>\SQL-DW-Project\Datasets\source_crm\prd_info.csv'
         DELIMITER ',' CSV HEADER;
     end_time := NOW();
     RAISE NOTICE '>> Load Duration: % seconds', EXTRACT(SECOND FROM end_time - start_time);
@@ -62,7 +62,7 @@ BEGIN
     RAISE NOTICE '>> Truncating Table: bronze.crm_sales_details';
     TRUNCATE TABLE bronze.crm_sales_details;
     RAISE NOTICE '>> Inserting Data Into: bronze.crm_sales_details';
-    COPY bronze.crm_sales_details FROM 'C:\Users\shaik\OneDrive\Documents\Codes\SQL\SQL-DW-Project\Datasets\source_crm\sales_details.csv' DELIMITER ',' CSV HEADER;
+    COPY bronze.crm_sales_details FROM '<File_Location>\SQL-DW-Project\Datasets\source_crm\sales_details.csv' DELIMITER ',' CSV HEADER;
     end_time := NOW();
     RAISE NOTICE '>> Load Duration: % seconds', EXTRACT(SECOND FROM end_time - start_time);
 
@@ -75,7 +75,7 @@ BEGIN
     RAISE NOTICE '>> Truncating Table: bronze.erp_loc_a101';
     TRUNCATE TABLE bronze.erp_loc_a101;
     RAISE NOTICE '>> Inserting Data Into: bronze.erp_loc_a101';
-    COPY bronze.erp_loc_a101 FROM 'C:\Users\shaik\OneDrive\Documents\Codes\SQL\SQL-DW-Project\Datasets\source_erp\loc_a101.csv' DELIMITER ',' CSV HEADER;
+    COPY bronze.erp_loc_a101 FROM '<File_Location>\SQL-DW-Project\Datasets\source_erp\loc_a101.csv' DELIMITER ',' CSV HEADER;
     end_time := NOW();
     RAISE NOTICE '>> Load Duration: % seconds', EXTRACT(SECOND FROM end_time - start_time);
 
@@ -84,7 +84,7 @@ BEGIN
     RAISE NOTICE '>> Truncating Table: bronze.erp_cust_az12';
     TRUNCATE TABLE bronze.erp_cust_az12;
     RAISE NOTICE '>> Inserting Data Into: bronze.erp_cust_az12';
-    COPY bronze.erp_cust_az12 FROM 'C:\Users\shaik\OneDrive\Documents\Codes\SQL\SQL-DW-Project\Datasets\source_erp\cust_az12.csv' DELIMITER ',' CSV HEADER;
+    COPY bronze.erp_cust_az12 FROM '<File_Location>\SQL-DW-Project\Datasets\source_erp\cust_az12.csv' DELIMITER ',' CSV HEADER;
     end_time := NOW();
     RAISE NOTICE '>> Load Duration: % seconds', EXTRACT(SECOND FROM end_time - start_time);
 
@@ -93,7 +93,7 @@ BEGIN
     RAISE NOTICE '>> Truncating Table: bronze.erp_px_cat_g1v2';
     TRUNCATE TABLE bronze.erp_px_cat_g1v2;
     RAISE NOTICE '>> Inserting Data Into: bronze.erp_px_cat_g1v2';
-    COPY bronze.erp_px_cat_g1v2 FROM 'C:\Users\shaik\OneDrive\Documents\Codes\SQL\SQL-DW-Project\Datasets\source_erp\px_cat_g1v2.csv' DELIMITER ',' CSV HEADER;
+    COPY bronze.erp_px_cat_g1v2 FROM '<File_Location>\SQL-DW-Project\Datasets\source_erp\px_cat_g1v2.csv' DELIMITER ',' CSV HEADER;
     end_time := NOW();
     RAISE NOTICE '>> Load Duration: % seconds', EXTRACT(SECOND FROM end_time - start_time);
 
